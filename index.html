@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Immortal Radiance</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    .justifed-text {
+     text-align: justify;
+    }
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: Black;
+    }
+
+    header {
+      text-align: center;
+      background:linear-gradient(to bottom right,#FFA500, #808080);
+      color: white;
+      padding: 1rem 0;
+    }
+
+    nav {
+      background-color: #444;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+      padding-bottom: 100px;
+    }
+
+    .player-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Increased padding */
+    }
+    .player {
+      background: linear-gradient(to bottom,#BDA09C,#262436,#BDA09C);
+      border-radius: 5px;
+      padding: 50 px;
+      margin: 0 20px;
+      width: 250px;
+      text-align: center;
+      color: white
+    }
+    .player img {
+      width: 120px;
+      height: 160px;
+      margin-top: 10px;
+      border-radius: 80%;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach(function(link) {
+        link.addEventListener("click", scrollToSection);
+      });
+
+      function scrollToSection(event) {
+        event.preventDefault();
+        const targetId = event.target.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Immortal Radiance</h1>
+    <p>Radiate forever, illuminating the world.</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#players">Players</a>
+    <a href="#schedule">Schedule</a>
+  </nav>
+  <main>
+    <h2 id="about">About Us</h2>
+    <p class="justified-text">In the realm of competitive gaming, where legends are forged and victories immortalized, stands Immortal Radiance. A team of unparalleled skill and unwavering determination, we bring forth a brilliance that transcends time. Our gameplay shines with the intensity of a thousand suns, casting a radiant glow upon the esports landscape.
+
+Guided by a relentless pursuit of excellence and a commitment to teamwork, we strive to illuminate the path to victory with our skill, strategy, and unwavering spirit. Join us on this journey as we etch our name in the annals of esports history, our radiance burning brightly for eternity.</p>
+    
+    <h2 id="players">Immortal Luna</h2>
+    
+    <div class="player-container">
+      <!-- Player 1 section -->
+      <div class="player">
+        <img src="Utaya.png" alt="Player 1">
+        <div class="player-details">
+          <h3>Utaya</h3>
+          <p><img src="Gold.png" style="vertical-align: middle; margin-left: 10px;"></p>
+        </div>
+      </div>
+
+      <!-- Player 2 section -->
+      <div class="player">
+        <img src="Blank.png" alt="Player 2">
+        <div class="player-details">
+          <h3>Kanao</h3>
+          <p><img src="Exp.png" style="vertical-align: middle; margin-left: 10px;"></p>
+        </div>
+      </div>
+
+      <!-- Player 3 section -->
+      <div class="player">
+        <img src="Lustree.png" alt="Player 3">
+        <div class="player-details">
+          <h3>Lustre</h3>
+          <p><img src="Jungler.png" style="vertical-align: middle; margin-left: 10px;"></p>
+        </div>
+      </div>
+
+      <!-- Player 4 section -->
+      <div class="player">
+        <img src="Lysie.png" alt="Player 4">
+        <div class="player-details">
+          <h3>Lysie</h3>
+          <p><img src="Mid.png" style="vertical-align: middle; margin-left: 10px;"></p>
+        </div>
+      </div>
+
+      <!-- Player 5 section -->
+      <div class="player">
+        <img src="Mutey.png" alt="Player 5">
+        <div class="player-details">
+          <h3>Mutey</h3>
+          <p><img src="Roam.png" style="vertical-align: middle; margin-left: 10px;"></p>
+        </div>
+      </div>
+    </div>
+    <h2 id="schedule">Schedule</h2>
+      <table>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Event</th>
+    </tr>
+    <tr>
+      <td>October 26</td>
+      <td>08:00 PM</td>
+      <td>Scrim</td>
+    </tr>
+    <tr>
+      <td>October 28</td>
+      <td>09:00 PM</td>
+      <td>MCL</td>
+    </tr>
+  </table>
+  </main>
+  <footer>
+    <p>&copy; 2024 Immortal Radiance E-Sports Team. All rights reserved.</p>
+  </footer>
+</body>
+</html>
